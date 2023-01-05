@@ -1,10 +1,10 @@
 # ATD2.0
 DNA-vaccine-design-2.0
 
-#Author
+##Author
 Xinwen Zheng
 
-#Email
+##Email
 1602371546@qq.com
 
 # Introduction
@@ -39,5 +39,5 @@ Users can upload carrier files by themselves. PVAX1 carrier is used by default
 (Enter the following command to find the relevant output file in the $HOME/$USER directory)
 python3 ./ATD2.0/sum.py -c A+A -p 5X5C+5K6G -if ./ATD2.0/demo/5X5C.fasta+./ATD2.0/demo/5K6G.fasta -ip ./ATD2.0/demo/5X5C.pdb+./ATD2.0/demo/5K6G.pdb -ho Sus-scrofa
 
-#Updates
+##Updates
 The software will be updated on github from time to time. If you have any problems, you can send an email to 1602371546@qq.com.
