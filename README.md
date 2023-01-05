@@ -35,8 +35,8 @@ The name of the enzyme is connected with "+", and the default is "BamHI+NheI"
 7. -v [absolute path of carrier file]  
 Users can upload carrier files by themselves. PVAX1 carrier is used by default
 
-# Vaccine construction instance 
-(Enter the following command to find the relevant output file in the $HOME/$USER directory)
+# Vaccine construction instance  
+(Enter the following command to find the relevant output file in the $HOME/$USER directory)  
 python3 ./ATD2.0/sum.py -c A+A -p 5X5C+5K6G -if ./ATD2.0/demo/5X5C.fasta+./ATD2.0/demo/5K6G.fasta -ip ./ATD2.0/demo/5X5C.pdb+./ATD2.0/demo/5K6G.pdb -ho Sus-scrofa
 
 ## Updates
