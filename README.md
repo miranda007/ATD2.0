@@ -31,9 +31,9 @@ If you need to input multiple files, the absolute path of the file should be con
 5. -ho [Latin scientific name of host]  
 The "./ATD2.0/codon" folder stores the codon usage tables of 22 common species. Users only need to enter the Latin scientific name of the host to be vaccinated. Note that the scientific name space should be replaced by "-", such as "Sus-scrofa". If there is no appropiate codon usage tables in the codon folder, users can download them from http://www.kazusa.or.jp/codon/, name it "<Latin scientific name (space is replaced by '-')>. txt", and put it in the codon folder. 
 6. -e [Name of enzyme selected by double digestion]  
-The name of the enzyme is connected with "+", and the default is "BamHI+NheI"
+The name of the enzyme is connected with "+", and the default is "BamHI+NheI".
 7. -v [absolute path of carrier file]  
-Users can upload carrier files by themselves. PVAX1 carrier is used by default
+Users can upload carrier files by themselves. PVAX1 vector is used by default.
 
 # Vaccine construction instance  
 (Enter the following command to find the relevant output file in the $HOME/$USER directory)  
