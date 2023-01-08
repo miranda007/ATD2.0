@@ -84,7 +84,7 @@ python3 ./ATD2.0/sum.py -c A+A -p 5X5C+5K6G -if ./ATD2.0/demo/5X5C.fasta+./ATD2.
 
 # Usage
 After installing dependent packages such as blast, you need to enter the following parameters:
-(Items 1-5 are mandatory parameters, and items 6-9 are optional parameters)
+(Items 1-5 are mandatory parameters, and items 6-9 are optional parameters)  
 **1. -p --pdb_name**    
   The user can enter the pathogen protein PDB number or the pathogen protein name. Note that the PDB number needs to be capitalized, and the pathogen protein name must not contain spaces. If you need to enter multiple names, please connect them with "+", for example: "5X5C+5K6G".  
   
@@ -119,10 +119,10 @@ The name of the enzymes that selected in Double Digest should be connected with 
 Users can upload carrier files by themselves. PVAX1 vector is used by default.  
                         
 **8. -us --upstream_insert_sequence**
-Users can insert base sequence after upstream enzyme digestion site according to the selected carrier."GCCGCCACCGCCACCATG" is used by default.  
+Users can insert base sequence after upstream enzyme digestion site according to the selected carrier. "GCCGCCACCGCCACCATG" is used by default.  
                         
 **9. -ds --downstream_insert_sequence**  
-Users can insert base sequence before downstream enzyme digestion site according to the selected carrier."TAG" is used by default.
+Users can insert base sequence before downstream enzyme digestion site according to the selected carrier. "TAG" is used by default.
 
 # Updates
 The software will be updated on github from time to time. If you have any problems, you can send an email to 1602371546@qq.com.
