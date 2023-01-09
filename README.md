@@ -92,7 +92,7 @@ python3 ./ATD2.0/sum.py <parameters>
 1.``` -p   --pdb_name```    
   The user can enter the pathogen protein PDB number or the pathogen protein name. Note that the PDB number needs to be capitalized, and the pathogen protein name must not contain spaces. If you need to enter multiple names, please connect them with "+", for example: "5X5C+5K6G".  
   
-2. ```-c   --chain```  
+2. ```-c   --chain```   
   Note that the name of the selected chain needs to be capitalized. If you need to enter multiple names, you need to connect them with "+", for example: "A+A". Note that the writing order of the chain and PDB number or pathogen protein name should correspond.  
   
 3.``` -if   --in_fasta_file```  
