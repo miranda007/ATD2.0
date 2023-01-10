@@ -2,13 +2,13 @@
 AutoDVD2
 
 ## Author
-Xinwen Zheng
+Hongli Du; Jerome Lon; Xinwen Zheng
 
 ## Email
 1602371546@qq.com
 
 # Introduction
-AutoDVD2, which is also abbreviated as ATD2.0, is a Linux-based command-line-driven tool for automating the construction of DNA vaccines. AutoDVD2 can quickly construct DNA vaccine plasmids that can express conserved linear B cell epitopes. AutoDVD2 follows the basic construction framework of AutoDVD, but has improved the amino acid conservation analysis, antigen epitope screening and codon optimization. Both AutoDVD conservative analysis and codon optimization need to be connected to the Internet to capture the results of web page analysis. AutoDVD2 uses a new set of algorithms without networking, which greatly improves the stability and speed of the software.It integrates automated methods into an easy-to-use tool to assist researchers without programming skills.
+AutoDVD2 is a Linux-based command-line-driven tool for automating the construction of DNA vaccines. AutoDVD2 can quickly construct DNA vaccine plasmids that can express conserved linear B cell epitopes. AutoDVD2 follows the basic construction framework of AutoDVD, but has improved the amino acid conservation analysis, antigen epitope screening and codon optimization. Both AutoDVD conservative analysis and codon optimization need to be connected to the Internet to capture the results of web page analysis. AutoDVD2 uses a new set of algorithms without networking, which greatly improves the stability and speed of the software.It integrates automated methods into an easy-to-use tool to assist researchers without programming skills.
 
 The main functions of the software are as follows:
 1. Linear B cell epitope screening
@@ -39,14 +39,14 @@ sudo git config --global user.email <email account>
 sudo git config --global user.name “<user name of github>”  
 sudo git config --global --unset http.proxy  
 sudo git config --global --unset https.proxy  
-sudo git clone https://github.com/miranda007/ATD2.0.git  
+sudo git clone https://github.com/miranda007/AutoDVD2.git  
 ```
 ## 2.Install dependent environment:
 Run the following command line at the terminal:  
 ```
 sudo apt install openjdk-11-jre-headless  
 sudo apt install pip  
-pip install -r ./ATD2.0/requirements.txt  
+pip install -r ./AutoDVD2/requirements.txt  
 ```
 ## 3.Install blast:
 1) Download blast at: https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2.13.0+-x64-linux.tar.gz  
@@ -56,10 +56,10 @@ sudo chown -R $USER /home/$USER
 sudo chown -R $USER <path-to-blast>
 sudo tar -xvf <path-to-blast>
 sudo chown -R $USER ./ncbi-blast-2.13.0+
-sudo mv ./ncbi-blast-2.13.0+ ./ATD2.0/blast
+sudo mv ./ncbi-blast-2.13.0+ ./AutoDVD2/blast
 sudo vim ~/.bashrc
 ```
-3) Open ~/.bashrc, insert " export PATH=./ATD2.0/blast/bin:$PATH" at the last line.  
+3) Open ~/.bashrc, insert " export PATH=./AutoDVD2/blast/bin:$PATH" at the last line.  
 4) Run the following command line at the terminal:  
 ```
 source ~/.bashrc
@@ -68,23 +68,23 @@ source ~/.bashrc
 1) Download swissprot at: https://ftp.ncbi.nlm.nih.gov/blast/db/swissprot.tar.gz  
 2) Run the following command line at the terminal:  
 ```
-sudo mkdir ./ATD2.0/blast/db
-sudo chown -R $USER ./ATD2.0/blast/db
-sudo mkdir ./ATD2.0/blast/db/swissprot
-sudo chown -R $USER ./ATD2.0/blast/db/swissprot
-cd ./ATD2.0/blast/db/swissprot
+sudo mkdir ./AutoDVD2/blast/db
+sudo chown -R $USER ./AutoDVD2/blast/db
+sudo mkdir ./AutoDVD2/blast/db/swissprot
+sudo chown -R $USER ./AutoDVD2/blast/db/swissprot
+cd ./AutoDVD2/blast/db/swissprot
 sudo tar -xvf <path-to-swissprot>
 ```
 
 # Test  
 (Enter the following command to find the relevant output file in the $HOME/$USER directory)  
 ```
-python3 ./ATD2.0/sum.py -c A+A -p 5X5C+5K6G -if ./ATD2.0/demo/5X5C.fasta+./ATD2.0/demo/5K6G.fasta -ip ./ATD2.0/demo/5X5C.pdb+./ATD2.0/demo/5K6G.pdb -ho Sus-scrofa
+python3 ./AutoDVD2/sum.py -c A+A -p 5X5C+5K6G -if ./AutoDVD2/demo/5X5C.fasta+./AutoDVD2/demo/5K6G.fasta -ip ./AutoDVD2/demo/5X5C.pdb+./AutoDVD2/demo/5K6G.pdb -ho Sus-scrofa
 ```
 # Usage
 Run the following command line at the terminal:  
 ```
-python3 ./ATD2.0/sum.py <parameters>
+python3 ./AutoDVD2/sum.py <parameters>
 ```
 
 # Parameters
@@ -96,13 +96,13 @@ python3 ./ATD2.0/sum.py <parameters>
   Note that the name of the selected chain needs to be capitalized. If you need to enter multiple names, you need to connect them with "+", for example: "A+A". Note that the writing order of the chain and PDB number or pathogen protein name should correspond.  
   
 3.``` -if   --in_fasta_file```  
-  The name format of the fasta file should be "<capitalized PDB number or pathogen protein name>.fasta". Before uploading, please check whether the fasta file only contains sequences of one specific chain.If not, you need to manually delete redundant amino acid sequences. If you need to input multiple files, the absolute paths of the file should be connected with "+", for example: "./ATD2.0/demo/5X5C.fasta+./ATD2.0/demo/5K6G.fasta”. Note that the writing order of the paths should correspond to the PDB number or the name of the pathogen protein.  
+  The name format of the fasta file should be "<capitalized PDB number or pathogen protein name>.fasta". Before uploading, please check whether the fasta file only contains sequences of one specific chain.If not, you need to manually delete redundant amino acid sequences. If you need to input multiple files, the absolute paths of the file should be connected with "+", for example: "./AutoDVD2/demo/5X5C.fasta+./AutoDVD2/demo/5K6G.fasta”. Note that the writing order of the paths should correspond to the PDB number or the name of the pathogen protein.  
   
 4.``` -ip   --in_PDB_file```    
-  The name format of the pdb file should be "<capitalized PDB number or pathogen protein name>.pdb". If you need to input multiple files, the absolute paths of the file should be connected with "+", for example: "./ATD2.0/demo/5X5C.pdb+./ATD2.0/demo/5K6G.pdb”. Note that the writing order of the paths should correspond to the PDB number or the name of the pathogen protein.  
+  The name format of the pdb file should be "<capitalized PDB number or pathogen protein name>.pdb". If you need to input multiple files, the absolute paths of the file should be connected with "+", for example: "./AutoDVD2/demo/5X5C.pdb+./AutoDVD2/demo/5K6G.pdb”. Note that the writing order of the paths should correspond to the PDB number or the name of the pathogen protein.  
   
 5.``` -ho   --host```  
-  The "./ATD2.0/codon" folder stores the codon usage tables of 22 common species. Users only need to enter the Latin scientific name of the host to be vaccinated. Note that the scientific name space should be replaced by "-", such as "Sus-scrofa". If there is no appropiate codon usage table in the codon folder, users can obtain it from http://www.kazusa.or.jp/codon/, format it according to files in codon folder, store it in the txt file, name it "Latin scientific name (space is replaced by -).txt",  and put it into the codon folder.   
+  The "./AutoDVD2/codon" folder stores the codon usage tables of 22 common species. Users only need to enter the Latin scientific name of the host to be vaccinated. Note that the scientific name space should be replaced by "-", such as "Sus-scrofa". If there is no appropiate codon usage table in the codon folder, users can obtain it from http://www.kazusa.or.jp/codon/, format it according to files in codon folder, store it in the txt file, name it "Latin scientific name (space is replaced by -).txt",  and put it into the codon folder.   
   The Latin scientific name and corresponding English name of the host that can be directly selected are as follows:  
 1. Ailuropoda-melanoleuca --> panda             2. Anas-platyrhynchos --> duck                  
 3. Anser-cygnoides-orientalis --> goose         4. Bos-taurus --> cattle                        
