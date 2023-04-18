@@ -88,7 +88,6 @@ python3 ./AutoDVD2/sum.py <parameters>
 ```
 
 # Parameters
-(Items 1-5 are mandatory parameters, and items 6-9 are optional parameters)  
 1.``` -p   --pdb_name```    
   The user can enter the pathogen protein PDB number or the pathogen protein name. Note that the PDB number needs to be capitalized, and the pathogen protein name must not contain spaces. If you need to enter multiple names, please connect them with "+", for example: "5X5C+5K6G".  
   
