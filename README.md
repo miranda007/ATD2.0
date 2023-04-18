@@ -126,7 +126,13 @@ Users can upload carrier files by themselves. PVAX1 vector is used by default.
 Users can insert base sequence after upstream enzyme digestion site according to the selected carrier. "GCCGCCACCGCCACCATG" is used by default.  
                         
 9.``` -ds   --downstream_insert_sequence```  
-Users can insert base sequence before downstream enzyme digestion site according to the selected carrier. "TAG" is used by default.
+Users can insert base sequence before downstream enzyme digestion site according to the selected carrier. "TAG" is used by default.  
+  
+10.``` -w   --way```  
+If you choose to upload multiple sequence alignment file, please enter 'msa'. If you want to directly input the fasta file and use 'blastp' in AutoDVD2 for multiple sequence alignment, please enter 'blast'.  
+  
+11.``` -m   --msa_file```  
+Please enter the absolute path of multiple sequence alignment file. We recommend users to use MEGA to process multiple sequence alignment file. Note that the ID of the destination sequence should be named 'Query'.If you need to input multiple files, the absolute paths of the file should be connected with "+".  
 
 # Updates
 The software will be updated on github from time to time. If you have any problems, you can send an email to 1602371546@qq.com.
